@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/pup_logo.png" type="image/x-icon" />
+    <title>PUP Kiosk</title>
+  </head>
+  <body>
+    <i class="bx bx-menu bx-md menu"></i>
+    <nav tabindex="-1">
+      <h2 class="nav__title">PUP KIOSK</h2>
+      <ul class="nav__container"></ul>
+    </nav>
+    <div class="map">
+      <div class="map__header">
+        <img src="images/pup_logo.png" alt="PUP logo" />
+        <h1 class="map__title">Polytechnic University of the Philippines</h1>
+      </div>
+      <svg
+        style="width: 100%"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 700 524"
+      >
+        <image xlink:href="images/pup_map.png" style="width: 100%"></image>
+        <!-- 1. Amphitheater -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="290.84 278.722 285.332 291.942 271.01 298.552 258.892 297.45 250.079 288.637 246.774 279.824 252.282 279.824 262.197 269.909 273.214 276.519"
+          ></polygon>
+        </g>
+        <!-- 2. Water Pump Facility -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="181.775 46.2701 177.369 46.2701 177.369 39.6601 199.402 39.6601 199.402 60.5918 182.877 60.5918"
+          ></polygon>
+        </g>
+        <!-- 3. Campus Development and Maintenance Building -->
+        <g>
+          <rect
+            x="211.52029404458656"
+            y="481.4290025910642"
+            width="55.08340990744446"
+            height="16.525022972233387"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 4. Catwalk -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="396.601 146.522 402.109 141.014 440.667 209.317 451.684 213.724 625.748 215.927 626.849 223.639 442.871 219.232 435.159 213.724"
+          ></polygon>
+        </g>
+        <!-- 5. Centennial Monument -->
+        <g>
+          <circle
+            cx="349.2288188131977"
+            cy="226.94364881867102"
+            r="10.156878930019417"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 6. Charlie del Rosario Building -->
+        <g>
+          <polygon class="image-mapper-shape" points="96, 175, 83, 198, 165, 246, 178, 222"></polygon>
+        </g>
+        <!-- 7. East Gate -->
+        <g>
+          <rect
+            x="619.1375273596753"
+            y="370.16051457802655"
+            width="18.728359368531073"
+            height="102.45514242784668"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 8. Flag Pole -->
+        <g>
+          <circle
+            cx="370.1605145780265"
+            cy="306.263759085391"
+            r="9.412657211081385"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 9. PUP Grandstand -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="436.891 352.017 475.85 292.188 489.763 300.537 449.414 360.366"
+          ></polygon>
+        </g>
+        <!-- 10. Gymnasium and Sports Center -->
+        <g>
+          <rect
+            x="463.8023114206821"
+            y="55.08340990744443"
+            width="114.57349260748441"
+            height="58.388414501891084"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 11. PUP Interfaith Chapel -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="326.094 392.194 318.382 404.312 324.992 434.057 337.11 441.769 365.754 435.159 372.364 423.041 366.855 394.397 353.635 386.686"
+          ></polygon>
+        </g>
+        <!-- 12. PUP Laboratory High School -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="183, 204, 189, 194, 164, 95, 104, 60, 87, 79, 82, 88, 71, 110, 79, 143, 183, 204"
+          ></polygon>
+        </g>
+        <!-- 13. PUP Lagoon -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="318.382 257.79 327.195 245.672 327.195 233.554 317.28 217.029 310.67 200.504 305.162 158.64 290.84 158.64 286.434 166.352 287.535 194.995 286.434 207.114 275.417 221.435 265.502 244.57 254.485 257.79 234.655 267.705 288.637 265.502 306.264 263.299"
+          ></polygon>
+        </g>
+        <!-- 14. PUP Dome -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="247, 328, 269, 328, 288, 363, 276, 381, 237, 385, 225, 363, 247, 328"
+          ></polygon>
+        </g>
+        <!-- 15. PUP East Wing -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="237, 385, 235, 467, 243, 467, 243, 471, 252, 471, 252, 476, 266, 477, 266, 468, 274, 468, 276, 382, 237, 385"
+          ></polygon>
+        </g>
+        <!-- 16. PUP North Wing -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="340, 289, 342, 294, 350, 291, 358, 305, 355, 308, 359, 313, 355, 315, 359, 324, 288, 362, 268, 328"
+          ></polygon>
+        </g>
+        <!-- 17. PUP South Wing -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="187, 350, 227, 423, 223, 426, 230, 440, 196, 460, 188, 447, 183, 449, 143, 374, 147, 371, 141, 359, 177, 340, 182, 351"
+          ></polygon>
+        </g>
+        <!-- 18. PUP West Wing -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="225,363, 155, 320, 158, 313, 151, 308, 160, 296, 164, 298, 167, 290, 172, 292, 177, 284, 247, 328, 225, 363"
+          ></polygon>
+        </g>
+        <!-- 19. PUP Main Gate -->
+        <g>
+          <circle
+            cx="637.8658867282064"
+            cy="230.24865341311772"
+            r="9.476908176833513"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 20. PUP Freedom Park -->
+        <g>
+          <circle
+            cx="384.482201153962"
+            cy="282.02705872611546"
+            r="9.853619918842492"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 21. Ninoy Aquino Building -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="209, 58, 239, 50, 253, 108, 306, 95, 314, 122, 260, 138, 276, 197, 247, 205, 230, 141, 221, 144, 215, 125, 226, 121, 209, 58"
+          ></polygon>
+        </g>
+        <!-- 22. PUP Basketball and Volleyball Court -->
+        <g>
+          <rect
+            x="429.65059727806647"
+            y="142.11519756120663"
+            width="40.761723331508904"
+            height="38.558386935211075"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 23. Nutrition and Food Science Building -->
+        <g>
+          <rect
+            x="272.11204494277547"
+            y="482.53067078921316"
+            width="120.08183359822885"
+            height="14.32168657593553"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 24. PUP Oval -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="512.025 297.754 527.331 286.623 542.636 281.057 557.941 279.666 576.029 285.232 589.942 293.58 602.465 306.102 609.422 322.799 612.204 340.887 605.247 364.54 591.334 384.019 550.984 442.457 538.462 453.588 523.156 460.545 507.851 463.327 491.155 460.545 474.458 453.588 459.153 438.283 452.196 424.369 449.414 409.064 449.414 392.367 453.588 381.236"
+          ></polygon>
+        </g>
+        <!-- 25. Physical Education Building -->
+        <g>
+          <rect
+            x="324.9921184539221"
+            y="46.27006432225332"
+            width="27.541704953722217"
+            height="99.15013783339995"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 26. Pasig River -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="1, 29, 30, 75, 37, 129, 60, 190, 74, 240, 74, 279, 79, 319, 96, 335, 98, 362, 109, 379, 117, 421, 113, 450, 130, 523, 1, 523"
+          ></polygon>
+        </g>
+        <!-- 27. PUP Sta. Mesa Ferry Station -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="138.81 507.869 143.217 457.192 160.844 459.396 156.437 508.971"
+          ></polygon>
+        </g>
+        <!-- 28. Access Road -->
+        <g>
+          <polygon class="image-mapper-shape" points="520, 240, 543, 240, 388, 358, 374, 350, 520, 240"></polygon>
+        </g>
+        <!-- 29. Student Canteen -->
+        <g>
+          <circle
+            cx="146.5218703538022"
+            cy="251.18034917794657"
+            r="10.15687893001937"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 30. Linear Park -->
+        <g>
+          <circle
+            cx="113.47182440933551"
+            cy="334.9071322372621"
+            r="10.156878930019433"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 31. Mural Brass Sculpture -->
+        <g>
+          <circle
+            cx="638.9675549263553"
+            cy="252.28201737609544"
+            r="9.47690817683356"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 32. PUP Obelisk and Mabini Monument -->
+        <g>
+          <circle
+            cx="398.8038877298976"
+            cy="229.14698521496882"
+            r="17.13793517763009"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 33. Property Building -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="46, 40, 87, 39, 87, 47, 77, 47, 77, 57, 66, 55, 67, 83, 56, 83, 55, 49, 46, 48, 46, 40"
+          ></polygon>
+        </g>
+        <!-- 34. PUP Pylon -->
+        <g>
+          <circle
+            cx="638.9675549263553"
+            cy="208.21528945013992"
+            r="10.39311699512347"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 35. Sampaguita Building - University Canteen -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="116, 253, 149, 273, 129, 306, 106, 292, 119, 274, 106, 268, 116, 253"
+          ></polygon>
+        </g>
+        <!-- 36. PUP Gazebo -->
+        <g>
+          <circle
+            cx="494.64902096885095"
+            cy="247.87534458349995"
+            r="10.156878930019374"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+        <!-- 37. PUP Swimming Pool -->
+        <g>
+          <rect
+            x="372.3638509743243"
+            y="62.79508729448664"
+            width="77.11677387042221"
+            height="40.76172333150888"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 38. PUP Tennis Court -->
+        <g>
+          <rect
+            x="499.0556937614465"
+            y="143.2168657593555"
+            width="52.880073511146634"
+            height="37.456718737062204"
+            class="image-mapper-shape"
+          ></rect>
+        </g>
+        <!-- 39. PUP RCC Overhead Water Tank -->
+        <g>
+          <polygon
+            class="image-mapper-shape"
+            points="195, 78, 205, 78, 211, 84, 211, 94, 205, 100, 196, 100, 189, 94, 189, 85, 195, 78"
+          ></polygon>
+        </g>
+        <!-- 40. Covered Walkway -->
+        <g>
+          <circle
+            cx="643.3742277189509"
+            cy="158.64022053343996"
+            r="10.8501734283293"
+            class="image-mapper-shape"
+          ></circle>
+        </g>
+      </svg>
+      <div tabindex="-1" class="popup"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

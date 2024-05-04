@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+/* Basic CSS Reset */
+*::before,
+*:after,
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keyframes */
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+/* Styles */
+
+:root {
+  --primary: 0, 100%, 27%;
+  --light: 0, 0%, 100%;
+  --gray: 0, 20%, 60%;
+  --dark: 0, 0%, 0%;
+
+  --fs-xl: 2rem;
+  --fs-l: 1.5rem;
+  --fs-md: 1.25rem;
+}
+
+body {
+  overflow: hidden;
+  min-height: calc(100 * var(--vh));
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(hsl(var(--dark), 0.2), hsl(var(--dark), 1));
+}
+body::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  background: url("images/pup_bg.jpg") no-repeat;
+  background-size: cover;
+  filter: brightness(0.75);
+}
+
+.menu {
+  position: absolute;
+  z-index: 9999;
+  top: 1rem;
+  left: 0.75rem;
+  color: hsl(var(--primary));
+  transition: all 0.5s ease;
+}
+.menu.active {
+  translate: 10.75rem 0;
+  color: hsl(var(--light));
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  display: grid;
+  width: clamp(14rem, 25vw, 18rem);
+  height: calc(100 * var(--vh));
+  padding: 2rem 1rem;
+  translate: -100% 0;
+  transition: translate 0.5s ease;
+  box-shadow: 0 0 0.25rem 0.25rem hsl(var(--dark), 0.4);
+  backdrop-filter: blur(0.5rem);
+  outline: none;
+}
+nav.show {
+  translate: 0;
+}
+nav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: hsl(var(--primary), 0.6);
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: none !important;
+  }
+
+  nav {
+    position: static;
+    translate: 0;
+  }
+}
+
+nav button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+
+.nav__container {
+  counter-reset: item;
+  overflow-y: auto;
+  display: grid;
+  gap: 1rem;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--gray), 0.6) hsl(var(--gray), 0.2);
+}
+
+.nav__title {
+  margin-bottom: 2rem;
+  font-size: clamp(1.25rem, 3vw, var(--fs-l));
+  font-weight: 700;
+  color: hsl(var(--light));
+}
+
+.nav__item {
+  display: flex;
+  color: hsl(var(--light), 0.5);
+}
+.nav__item::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  margin-right: 0.5rem;
+}
+.nav__item.active {
+  color: hsl(var(--light));
+}
+
+.map {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  margin-bottom: 1rem;
+  padding-inline: 1rem;
+}
+
+.map__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.75rem;
+  padding-inline: 1rem;
+}
+
+.map__header img {
+  width: clamp(3.5rem, 8vw, 4.5rem);
+  height: clamp(3.5rem, 8vw, 4.5rem);
+}
+
+.map__title {
+  font-size: clamp(1.25rem, 3vw, var(--fs-xl));
+  font-weight: 700;
+  font-family: "Cinzel", sans-serif;
+  color: hsl(var(--primary));
+}
+
+.image-mapper-shape {
+  fill: hsl(var(--dark), 0);
+}
+
+svg {
+  margin-inline: auto;
+  max-width: calc(100 * var(--vh));
+  border: 1px solid hsl(var(--dark));
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 0.25rem hsl(var(--dark), 0.3);
+}
+
+@media (min-width: 1280px) {
+  svg {
+    max-width: 45rem;
+  }
+}
+
+g {
+  position: relative;
+}
+g:hover .image-mapper-shape,
+.image-mapper-shape.active {
+  stroke: hsl(var(--dark));
+  stroke-width: 2px;
+  stroke-dasharray: 8;
+  fill: hsl(var(--dark), 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: dash 1s linear infinite;
+}
+
+.popup {
+  overflow-y: auto;
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  width: min(50vw, 15rem);
+  border: 1px solid hsl(var(--dark));
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: hsl(var(--light), 0.8);
+  text-align: center;
+  pointer-events: none;
+  outline: none;
+}
+
+.popup__image {
+  width: 100%;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.popup__title {
+  margin-top: 0.5rem;
+  font-size: clamp(1rem, 3vw, var(--fs-md));
+  font-weight: 700;
+}
+
+.popup__description {
+  margin-top: 0.5rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  color: hsl(var(--dark), 0.8);
+}
