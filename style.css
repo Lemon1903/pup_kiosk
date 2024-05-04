@@ -34,6 +34,15 @@ svg {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Styles */
 
 :root {
@@ -49,7 +58,7 @@ svg {
 
 body {
   overflow: hidden;
-  min-height: calc(100 * var(--vh));
+  min-height: calc(100 * var(--vh, 1vh));
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(hsl(var(--dark), 0.2), hsl(var(--dark), 1));
@@ -83,7 +92,7 @@ nav {
   left: 0;
   display: grid;
   width: clamp(14rem, 25vw, 18rem);
-  height: calc(100 * var(--vh));
+  height: calc(100 * var(--vh, 1vh));
   padding: 2rem 1rem;
   translate: -100% 0;
   transition: translate 0.5s ease;
@@ -187,7 +196,7 @@ nav button {
 
 svg {
   margin-inline: auto;
-  max-width: calc(100 * var(--vh));
+  max-width: calc(100 * var(--vh, 1vh));
   border: 1px solid hsl(var(--dark));
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0.25rem hsl(var(--dark), 0.3);
@@ -226,6 +235,13 @@ g:hover .image-mapper-shape,
   text-align: center;
   pointer-events: none;
   outline: none;
+}
+
+.popup__spinner {
+  display: grid;
+  place-items: center;
+  height: 3rem;
+  animation: spin 3s linear infinite;
 }
 
 .popup__image {
